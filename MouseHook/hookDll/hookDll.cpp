@@ -38,9 +38,7 @@ LRESULT CALLBACK MouseProc(int nCode, WPARAM wparam, LPARAM lparam)
 int setMouseHook(HWND hwnd)
 {
 	g_hWnd = hwnd;
-	glhInstance = GetModuleHandle(__TEXT("dlltest.dll"));
-	HWND hWndLv = FindWindow(TEXT("testWindows"), NULL);
-	DWORD ThreadId = GetWindowThreadProcessId(hWndLv, NULL);
+	glhInstance = GetModuleHandle(__TEXT("hookDll.dll"));
 	_glh_hook_ = SetWindowsHookEx(WH_MOUSE_LL, MouseProc, glhInstance, NULL);
 
 	return 0;
