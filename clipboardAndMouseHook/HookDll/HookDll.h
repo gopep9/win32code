@@ -9,7 +9,7 @@
 #endif
 //#define WM_HOOKMSG WM_USER+162
 extern "C" {
-	DLL_SAMPLE_API int setHook(HWND hwnd);
+	DLL_SAMPLE_API int setHook(HWND hwnd, DWORD dwThreadId);
 	DLL_SAMPLE_API int removeHook();
 }
 #undef DLL_SAMPLE_API
