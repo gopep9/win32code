@@ -11,6 +11,12 @@
 extern "C" {
 	DLL_SAMPLE_API int setHook(HWND hwnd, DWORD dwThreadId);
 	DLL_SAMPLE_API int removeHook();
+	struct CopyMessage
+	{
+		TCHAR copySource[512];
+		TCHAR copyAction[64];
+		TCHAR copyText[2048];
+	};
 }
 #undef DLL_SAMPLE_API
 
